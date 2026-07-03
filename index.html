@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cubrix</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <!-- Cal element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "30min", { origin: "https://app.cal.com" });
+    Cal.config = Cal.config || {};
+    Cal.config.forwardQueryParams = true;
+    Cal.ns["30min"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+  </script>
+  <!-- Cal element-click embed code ends -->
+</head>
+
+<body class="bg-[#0a0a0a]">
+
+  <header class="relative z-50 max-w-5xl w-full mr-auto ml-auto">
+    <nav class="flex max-w-7xl md:px-6 mr-auto ml-auto pt-4 pr-4 pb-4 pl-4 items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <svg class="md:w-14 md:h-14 w-[36px] h-[36px]" viewBox="0 0 48 48" aria-hidden="true" stroke-width="2"
+          style="width: 36px; height: 36px;">
+          <path d="M24 10 L26 22 L38 24 L26 26 L24 38 L22 26 L10 24 L22 22 Z" fill="currentColor" class=""></path>
+        </svg>
+        <span class="text-lg font-medium tracking-tight text-white">Cubrix</span>
+      </a>
+
+      <button id="menuBtn"
+        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu"
+          class="lucide lucide-menu h-5 w-5 text-white">
+          <path d="M4 12h16" class=""></path>
+          <path d="M4 18h16" class=""></path>
+          <path d="M4 6h16" class=""></path>
+        </svg>
+        <span class="sr-only">Open menu</span>
+      </button>
+
+      <div id="navLinks" class="hidden items-center gap-8 md:flex">
+        <a href="#hero" class="text-sm font-medium text-slate-300 hover:text-white">Home</a>
+        <a href="#expertise" class="text-sm font-medium text-slate-300 hover:text-white">Services</a>
+        <a href="#process" class="text-sm font-medium text-slate-300 hover:text-white">Process</a>
+        <a href="#why-choose-us" class="text-sm font-medium text-slate-300 hover:text-white">Why Us</a>
+        <a href="#features" class="text-sm font-medium text-slate-300 hover:text-white">Testimonials</a>
+        <div class="hidden h-6 w-px bg-white/10 md:block"></div>
+        <button
+          class="group relative inline-flex cursor-pointer transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px] hover:scale-[1.1] hover:text-white text-xs font-semibold text-white/70 tracking-tight rounded-full pt-[8px] pr-[16px] pb-[8px] pl-[16px] items-center justify-center"
+          style="box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);background:radial-gradient(ellipse at bottom,rgba(71,81,92,1) 0%,rgba(0,0,0,1) 100%);"
+          data-cal-link="cubrix/30min" data-cal-namespace="30min"
+          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+          <span class="relative z-10 text-sm font-normal rounded-full">Book us now</span>
+          <span aria-hidden="true"
+            class="absolute bottom-0 left-1/2 h-[1px] w-[70%] -translate-x-1/2 opacity-20 transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] group-hover:opacity-80 text-xs rounded-full"
+            style="background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="mx-auto hidden max-w-7xl px-4 md:hidden">
+      <div class="space-y-1 rounded-xl border border-white/10 bg-white/5 p-3 backdrop-blur">
+        <a class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/5" href="#hero">Home</a>
+        <a class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/5" href="#expertise">Services</a>
+        <a class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/5" href="#process">Process</a>
+        <a class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/5" href="#why-choose-us">Why Us</a>
+        <a class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/5" href="#features">Testimonials</a>
+        <div class="my-2 h-px w-full bg-white/10"></div>
+        <div class="flex items-center gap-2">
+          <button
+            class="flex-1 rounded-lg bg-white px-3 py-2 text-center text-sm font-medium text-black hover:bg-white/90"
+            data-cal-link="cubrix/30min" data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book us now</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section
+    class="relative bg-[#0a0a0a] text-neutral-400 selection:bg-cyan-500/30 selection:text-white overflow-x-hidden"
+    style="font-family: 'Inter', sans-serif;">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+
+    <canvas id="bg-canvas" class="fixed inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+
+    <div class="relative z-10 w-full flex flex-col items-center">
+
+      <!-- Hero Section -->
+      <section id="hero" class="w-full max-w-6xl px-4 pt-28 pb-0 flex flex-col items-center text-center relative z-10">
+
+        <div id="hero-badge"
+          class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-medium mb-8 opacity-0"
+          style="transform: translateY(10px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+          <iconify-icon icon="solar:stars-linear" class="text-sm"></iconify-icon>
+          <span>Introducing Cubrix</span>
+        </div>
+
+        <h1 id="hero-title"
+          class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-6 leading-[1.1] max-w-4xl opacity-0"
+          style="transform: translateY(20px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;">
+          Website design, development, and brand identity
+        </h1>
+
+        <p id="hero-desc" class="text-sm md:text-base text-neutral-400 max-w-2xl mb-10 leading-relaxed opacity-0"
+          style="transform: translateY(20px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;">
+          Cubrix is a full-service digital studio that architect digital experiences that are precise, purposeful, and
+          built to perform
+        </p>
+
+        <div id="hero-actions" class="flex flex-col sm:flex-row items-center justify-center gap-3 opacity-0"
+          style="transform: translateY(20px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;">
+          <button
+            class="w-full sm:w-auto px-6 py-3 bg-white text-black text-xs font-medium rounded-full hover:bg-neutral-200 flex items-center justify-center gap-2"
+            style="transition: background-color 0.2s ease;" data-cal-link="cubrix/30min" data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+            Build your website now <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+          </button>
+        </div>
+      </section>
+
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        // Hero Entrance
+        setTimeout(() => {
+          document.getElementById('hero-badge').style.opacity = '1';
+          document.getElementById('hero-badge').style.transform = 'translateY(0)';
+
+          document.getElementById('hero-title').style.opacity = '1';
+          document.getElementById('hero-title').style.transform = 'translateY(0)';
+
+          document.getElementById('hero-desc').style.opacity = '1';
+          document.getElementById('hero-desc').style.transform = 'translateY(0)';
+
+          document.getElementById('hero-actions').style.opacity = '1';
+          document.getElementById('hero-actions').style.transform = 'translateY(0)';
+        }, 100);
+      });
+
+      // --- WebGL Dithered Atmosphere Shader ---
+      const canvas = document.getElementById('bg-canvas');
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: false, antialias: false });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+
+      const geometry = new THREE.PlaneGeometry(2, 2);
+
+      // Required Skill: Dither + Atmosphere
+      const material = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
+        },
+        vertexShader: `
+                    void main() {
+                        gl_Position = vec4(position, 1.0);
+                    }
+                `,
+        fragmentShader: `
+                    uniform float uTime;
+                    uniform vec2 uResolution;
+
+                    // Modulo function for float
+                    float mod289(float x){return x - floor(x * (1.0 / 289.0)) * 289.0;}
+                    vec4 mod289(vec4 x){return x - floor(x * (1.0 / 289.0)) * 289.0;}
+                    vec4 perm(vec4 x){return mod289(((x * 34.0) + 1.0) * x);}
+
+                    // Simple 3D noise
+                    float noise(vec3 p){
+                        vec3 a = floor(p);
+                        vec3 d = p - a;
+                        d = d * d * (3.0 - 2.0 * d);
+
+                        vec4 b = a.xxyy + vec4(0.0, 1.0, 0.0, 1.0);
+                        vec4 k1 = perm(b.xyxy);
+                        vec4 k2 = perm(k1.xyxy + b.zzww);
+
+                        vec4 c = k2 + a.zzzz;
+                        vec4 k3 = perm(c);
+                        vec4 k4 = perm(c + 1.0);
+
+                        vec4 o1 = fract(k3 * (1.0 / 41.0));
+                        vec4 o2 = fract(k4 * (1.0 / 41.0));
+
+                        vec4 o3 = o2 * d.z + o1 * (1.0 - d.z);
+                        vec2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
+
+                        return o4.y * d.y + o4.x * (1.0 - d.y);
+                    }
+
+                    // Bayer Dither Matrix (4x4) encoded in array
+                    const int bayerMatrix[16] = int[](
+                        0, 8, 2, 10,
+                        12, 4, 14, 6,
+                        3, 11, 1, 9,
+                        15, 7, 13, 5
+                    );
+
+                    int getBayer(int x, int y) {
+                        return bayerMatrix[x + y * 4];
+                    }
+
+                    void main() {
+                        vec2 uv = gl_FragCoord.xy / uResolution.xy;
+                        
+                        // --- Atmosphere Logic ---
+                        // Fluid folds moving slowly
+                        float t = uTime * 0.15;
+                        
+                        // Layer 1: Wide folds
+                        float n1 = noise(vec3(uv.x * 2.0 + t, uv.y * 1.5 - t * 0.5, t));
+                        // Layer 2: Tight detailed folds
+                        float n2 = noise(vec3(uv.x * 6.0 - t * 1.2, uv.y * 3.0, t * 1.5));
+                        
+                        float intensity = (n1 * 0.6 + n2 * 0.4);
+                        
+                        // Cinematic focal glow (bottom right)
+                        vec2 focalPoint = vec2(0.8, 0.2);
+                        float dist = distance(uv, focalPoint);
+                        float glow = smoothstep(1.2, 0.0, dist);
+                        
+                        // Accumulate brightness
+                        float luminance = intensity * glow * 1.8;
+
+                        // --- Dither Logic ---
+                        // Enlarge pixels for visible Bayer matrix
+                        float pixelScale = 3.0;
+                        int dX = int(mod(gl_FragCoord.x / pixelScale, 4.0));
+                        int dY = int(mod(gl_FragCoord.y / pixelScale, 4.0));
+                        
+                        float ditherThreshold = float(getBayer(dX, dY)) / 16.0;
+                        
+                        // Quantize
+                        float ditheredOutput = step(ditherThreshold, luminance);
+
+                        // --- Palette Application ---
+                        // Base: Dark charcoal/navy
+                        vec3 baseColor = vec3(0.02, 0.025, 0.03);
+                        // Midtone: Soft cyan/grey mix
+                        vec3 midColor = vec3(0.08, 0.12, 0.15);
+                        // Highlight: Pure soft white
+                        vec3 highlightColor = vec3(0.8, 0.9, 0.95);
+
+                        // Map continuous luminance to colors to preserve underlying shape slightly before dither
+                        vec3 atmosphericColor = mix(baseColor, midColor, luminance);
+                        
+                        // Apply hard dither overlay
+                        vec3 finalColor = mix(atmosphericColor, highlightColor, ditheredOutput * luminance * 0.5);
+
+                        // Add subtle vignette
+                        float vignette = smoothstep(1.5, 0.3, length(uv - vec2(0.5)));
+                        finalColor *= vignette;
+
+                        gl_FragColor = vec4(finalColor, 1.0);
+                    }
+                `
+      });
+
+      const mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
+
+      // Animation Loop
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        material.uniforms.uTime.value = clock.getElapsedTime();
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      // Handle Resize
+      window.addEventListener('resize', () => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        renderer.setSize(width, height);
+        material.uniforms.uResolution.value.set(width, height);
+      });
+
+    </script>
+  </section>
+
+  <div
+    style="background-color: #F4F4F1; color: #ffffff; font-family: 'Inter', sans-serif; min-height: 100vh; font-size: 2.5rem; line-height: 1.3; letter-spacing: -0.04em; overflow-x: hidden;">
+
+    <main class="mx-auto flex flex-col gap-16" style="padding: 80px 60px 120px 60px; max-width: 1400px;">
+      <div style="font-size: 4rem; width: 60px; height: 60px; animation: spin 12s linear infinite;">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2V22M2 12H22M4.929 4.929L19.071 19.071M4.929 19.071L19.071 4.929" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+        <style>
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            }
+
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        </style>
+      </div>
+
+      <article style="max-width: 960px;">
+        <p class="reveal-text"
+          style="margin-bottom: 60px; opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+          Hello, I'm Tunde Oluwasemilore Victor, popularly known as Dr.Volt. I am a Sustainable growing Website Designer
+          based in
+          <span
+            style="display: inline-flex; align-items: center; height: 0.85em; margin: 0 0.1em; transform: translateY(0.1em);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="height: 100%;">
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z">
+              </path>
+              <path
+                d="M3.6 9H20.4M3.6 15H20.4M12 3V21M16 3C16 3 19 8 19 12C19 16 16 21 16 21M8 3C8 3 5 8 5 12C5 16 8 21 8 21">
+              </path>
+            </svg>
+          </span>
+          Lagos, Nigeria . I just started Cubrix, 19/06/26,
+          — Cubrix is a full-service digital studio specialising in website design, development, and brand identity.
+        </p>
+
+        <p class="reveal-text"
+          style="margin-bottom: 60px; opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+          We architect digital experiences that are precise, purposeful, and built to perform
+          <a href="#" style="color: inherit; text-decoration: none; border-bottom: 2px solid #ffffff;">for businesses
+            across Nigeria and around the world.</a>,
+          <span
+            style="display: inline-flex; align-items: center; height: 0.85em; margin: 0 0.1em; transform: translateY(0.1em);">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="height: 100%;">
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+          </span>
+        </p>
+
+        <p class="reveal-text"
+          style="opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+          <a href="#" style="color: inherit; text-decoration: none; border-bottom: 2px solid #ffffff;"> Precision.
+            Design. Impact.</a>
+        </p>
+      </article>
+    </main>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('.reveal-text');
+        items.forEach((item, index) => {
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+          }, 200 * index);
+        });
+      });
+    </script>
+  </div>
+
+  <section
+    class="overflow-hidden group md:p-16 bg-gradient-to-br from-white/10 via-white/0 to-white/10 w-full max-w-[1500px] rounded-[32px] ring-white/5 ring-1 pt-8 pr-8 pb-8 pl-8 relative shadow-2xl mx-auto my-16"
+    style="position: relative; --border-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)); --border-radius-before: 32px"
+    id="expertise">
+    <div class="z-0 absolute top-0 right-0 bottom-0 left-0">
+      <div class="bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-cyan-500/10 opacity-30 absolute inset-0">
+      </div>
+      <div class="bg-gradient-to-t from-[#000000] via-[#000000]/80 to-black/40 absolute top-0 right-0 bottom-0 left-0">
+      </div>
+    </div>
+
+    <div class="relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 mb-16 pb-8">
+        <div class="col-span-1">
+          <h2 class="text-7xl sm:text-9xl font-extrabold text-white leading-none tracking-tight">
+            SERVICES
+          </h2>
+          <div class="text-white text-sm font-light mt-4 opacity-50">
+            WHAT WE DO
+          </div>
+        </div>
+        <div class="col-span-1 self-end md:text-right mt-8 md:mt-0">
+          <span class="text-cyan-400 text-sm font-medium tracking-widest uppercase mb-1 block">
+            OUR SERVICES
+          </span>
+          <p class="text-white/70 max-w-sm ml-auto text-lg font-light">
+            &ldquo;Good design is not just how it looks — it's how well it works for you.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10">
+        <dl data-accordion="item"
+          class="flex flex-col border-b border-white/10 group/item cursor-pointer hover:bg-white/5 transition-colors rounded-xl">
+          <dt data-accordion="trigger" class="flex items-center justify-between p-6">
+            <div class="flex items-start gap-6">
+              <div data-accordion="dots" class="flex flex-col gap-1 pt-1 opacity-70">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/30 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/30 block"></span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-medium text-white group-hover/item:text-cyan-400 transition-colors">
+                  Website Development
+                </span>
+                <span class="text-sm text-gray-400 mt-1 font-light">
+                  We build websites that load fast, look great on any device, and are easy for your customers to use. Whether it's a simple one-page site or a full business platform, we've got you covered.
+                </span>
+              </div>
+            </div>
+            <div class="text-gray-400 group-hover/item:text-cyan-400 transition-colors">
+              <svg data-accordion="chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+          </dt>
+          <dd data-accordion="panel" class="hidden px-6 pb-6 text-sm text-gray-400 font-light leading-relaxed">
+            From fast-loading business sites to full-featured platforms, we deliver websites that are responsive, SEO-friendly, and tailored to your audience.
+          </dd>
+        </dl>
+
+        <dl data-accordion="item"
+          class="flex flex-col border-b border-white/10 group/item cursor-pointer hover:bg-white/5 transition-colors rounded-xl">
+          <dt data-accordion="trigger" class="flex items-center justify-between p-6">
+            <div class="flex items-start gap-6">
+              <div data-accordion="dots" class="flex flex-col gap-1 pt-1 opacity-70">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/30 block"></span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-medium text-white group-hover/item:text-cyan-400 transition-colors">
+                  Brand Design
+                </span>
+                <span class="text-sm text-gray-400 mt-1 font-light">
+                  Your brand deserves to stand out. We create visual identities — logos, colours, typography — that tell your story and connect with your audience.
+                </span>
+              </div>
+            </div>
+            <div class="text-gray-400 group-hover/item:text-cyan-400 transition-colors">
+              <svg data-accordion="chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+          </dt>
+          <dd data-accordion="panel" class="hidden px-6 pb-6 text-sm text-gray-400 font-light leading-relaxed">
+            We craft logo systems, colour palettes, and brand guidelines that give your business a professional, cohesive identity across every touchpoint.
+          </dd>
+        </dl>
+
+        <dl data-accordion="item"
+          class="flex flex-col border-b border-white/10 group/item cursor-pointer hover:bg-white/5 transition-colors rounded-xl">
+          <dt data-accordion="trigger" class="flex items-center justify-between p-6">
+            <div class="flex items-start gap-6">
+              <div data-accordion="dots" class="flex flex-col gap-1 pt-1 opacity-70">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-medium text-white group-hover/item:text-cyan-400 transition-colors">
+                  Social Media Management
+                </span>
+                <span class="text-sm text-gray-400 mt-1 font-light">
+                  We plan, create, and schedule content that grows your following and keeps your audience engaged across all major social platforms.
+                </span>
+              </div>
+            </div>
+            <div class="text-gray-400 group-hover/item:text-cyan-400 transition-colors">
+              <svg data-accordion="chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+          </dt>
+          <dd data-accordion="panel" class="hidden px-6 pb-6 text-sm text-gray-400 font-light leading-relaxed">
+            Content calendars, post creation, community management, and analytics — a full social strategy to build and maintain your brand's presence online.
+          </dd>
+        </dl>
+
+        <dl data-accordion="item"
+          class="flex flex-col border-b border-white/10 group/item cursor-pointer hover:bg-white/5 transition-colors rounded-xl">
+          <dt data-accordion="trigger" class="flex items-center justify-between p-6">
+            <div class="flex items-start gap-6">
+              <div data-accordion="dots" class="flex flex-col gap-1 pt-1 opacity-70">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/30 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/30 block"></span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-medium text-white group-hover/item:text-cyan-400 transition-colors">
+                  Graphics Design
+                </span>
+                <span class="text-sm text-gray-400 mt-1 font-light">
+                  From social media graphics to marketing materials — we design visuals that capture attention and communicate your message clearly.
+                </span>
+              </div>
+            </div>
+            <div class="text-gray-400 group-hover/item:text-cyan-400 transition-colors">
+              <svg data-accordion="chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+          </dt>
+          <dd data-accordion="panel" class="hidden px-6 pb-6 text-sm text-gray-400 font-light leading-relaxed">
+            Eye-catching designs for social media, print, presentations, and digital ads — all crafted to maintain brand consistency and visual impact.
+          </dd>
+        </dl>
+
+        <dl data-accordion="item"
+          class="flex flex-col border-b border-white/10 group/item cursor-pointer hover:bg-white/5 transition-colors rounded-xl">
+          <dt data-accordion="trigger" class="flex items-center justify-between p-6">
+            <div class="flex items-start gap-6">
+              <div data-accordion="dots" class="flex flex-col gap-1 pt-1 opacity-70">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/30 block"></span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl font-medium text-white group-hover/item:text-cyan-400 transition-colors">
+                  Content Writing &amp; Creation
+                </span>
+                <span class="text-sm text-gray-400 mt-1 font-light">
+                  Words that connect. From website copy to blog posts and emails, we write content that engages your audience and drives action.
+                </span>
+              </div>
+            </div>
+            <div class="text-gray-400 group-hover/item:text-cyan-400 transition-colors">
+              <svg data-accordion="chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </div>
+          </dt>
+          <dd data-accordion="panel" class="hidden px-6 pb-6 text-sm text-gray-400 font-light leading-relaxed">
+            Professional copywriting and content creation — website copy, blog articles, email newsletters, and marketing content tailored to your brand voice.
+          </dd>
+        </dl>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const triggers = document.querySelectorAll('[data-accordion="trigger"]');
+        triggers.forEach(function (trigger) {
+          trigger.addEventListener('click', function () {
+            const item = this.closest('[data-accordion="item"]');
+            const panel = item.querySelector('[data-accordion="panel"]');
+            const chevron = item.querySelector('[data-accordion="chevron"]');
+            const dots = item.querySelectorAll('[data-accordion="dots"] span');
+
+            panel.classList.toggle('hidden');
+            chevron.style.transform = panel.classList.contains('hidden') ? '' : 'rotate(180deg)';
+            dots.forEach(function (dot, i) {
+              if (i >= 2) {
+                dot.classList.toggle('bg-white/30');
+                dot.classList.toggle('bg-cyan-400');
+              }
+            });
+          });
+        });
+      })();
+    </script>
+  </section>
+
+  <section id="process" class="relative z-10 max-w-7xl sm:px-6 mr-auto ml-auto pt-20 pr-4 pb-20 pl-4">
+    <div class="text-center mb-16">
+      <p class="text-sm uppercase tracking-wider mb-4" style="color: #ffffff; font-weight: 600;">HOW WE WORK</p>
+      <h2 class="sm:text-7xl text-5xl font-light tracking-tight font-playfair mb-6" style="color: #ffffff;">From idea to live website, simple and stress-free</h2>
+      <p class="max-w-2xl text-xl mr-auto ml-auto" style="color: #a0a0a0;">Here's exactly what happens when you work with Cubrix.</p>
+    </div>
+
+    <div class="relative" id="timeline-container">
+      <!-- Progress Line - desktop only -->
+      <div
+        class="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-slate-200 hidden lg:block rounded-full overflow-hidden">
+        <div id="progress-line" class="w-full progress-line rounded-full"
+          style="height: 100%; background: linear-gradient(rgb(71, 85, 105), rgb(100, 116, 139)); transition: height 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); box-shadow: rgba(71, 85, 105, 0.3) 0px 0px 10px;">
+        </div>
+      </div>
+
+      <div class="space-y-12 lg:space-y-20" id="timeline-steps">
+        <!-- Step 1 -->
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 timeline-step" data-step="1"
+          style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+          <div class="flex-1 w-full lg:text-right lg:pr-12">
+            <div
+              class="glass hover-lift bg-white/80 border-slate-200/60 border rounded-3xl p-6 lg:p-8 transform transition-all duration-500">
+              <div class="flex gap-4 lg:justify-end mb-4 lg:mb-6 items-center">
+                <span class="uppercase text-sm font-medium text-slate-600 tracking-wider">Step 01</span>
+              </div>
+              <h3 class="text-2xl lg:text-3xl font-light font-playfair mb-3 lg:mb-4 text-slate-800">We Talk</h3>
+              <p class="text-sm lg:text-base leading-relaxed text-slate-600">We start with a simple conversation. You tell us what you need, what you like, and what your business is about.</p>
+            </div>
+          </div>
+          <div class="w-6 h-6 z-10 flex-shrink-0 rounded-full shadow-lg hidden lg:block timeline-dot" data-dot="1"
+            style="background: rgb(71, 85, 105); transform: scale(1); opacity: 1; transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); box-shadow: rgba(71, 85, 105, 0.4) 0px 0px 20px;">
+          </div>
+          <div class="flex-1 hidden lg:block lg:pl-12"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 timeline-step" data-step="2"
+          style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+          <div class="flex-1 hidden lg:block lg:pr-12"></div>
+          <div class="w-6 h-6 z-10 flex-shrink-0 rounded-full shadow-lg hidden lg:block timeline-dot" data-dot="2"
+            style="background: rgb(71, 85, 105); transform: scale(1); opacity: 1; transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); box-shadow: rgba(71, 85, 105, 0.4) 0px 0px 20px;">
+          </div>
+          <div class="flex-1 w-full lg:pl-12">
+            <div
+              class="glass hover-lift bg-white/80 border-slate-200/60 border rounded-3xl p-6 lg:p-8 transform transition-all duration-500">
+              <div class="flex gap-4 mb-4 lg:mb-6 items-center">
+                <span class="uppercase text-sm font-medium text-slate-600 tracking-wider">Step 02</span>
+              </div>
+              <h3 class="text-2xl lg:text-3xl font-light font-playfair mb-3 lg:mb-4 text-slate-800">We Plan &amp; Design</h3>
+              <p class="text-sm lg:text-base leading-relaxed text-slate-600">We put together a design that fits your brand. You get to see it, give feedback, and we adjust until you love it.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 timeline-step" data-step="3"
+          style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+          <div class="flex-1 w-full lg:text-right lg:pr-12">
+            <div
+              class="glass border rounded-3xl p-6 lg:p-8 hover-lift bg-white/80 border-slate-200/60 transform transition-all duration-500">
+              <div class="flex items-center gap-4 lg:justify-end mb-4 lg:mb-6">
+                <span class="uppercase text-sm font-medium text-slate-600 tracking-wider">Step 03</span>
+              </div>
+              <h3 class="text-2xl lg:text-3xl font-light font-playfair mb-3 lg:mb-4 text-slate-800">We Build</h3>
+              <p class="text-sm lg:text-base leading-relaxed text-slate-600">We turn the design into a real, working website. Fast, clean, and tested on all screens and devices.</p>
+            </div>
+          </div>
+          <div class="w-6 h-6 z-10 flex-shrink-0 rounded-full shadow-lg hidden lg:block timeline-dot" data-dot="3"
+            style="background: rgb(71, 85, 105); transform: scale(1); opacity: 1; transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); box-shadow: rgba(71, 85, 105, 0.4) 0px 0px 20px;">
+          </div>
+          <div class="flex-1 hidden lg:block lg:pl-12"></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 timeline-step" data-step="4"
+          style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+          <div class="flex-1 hidden lg:block lg:pr-12"></div>
+          <div class="w-6 h-6 z-10 flex-shrink-0 rounded-full shadow-lg hidden lg:block timeline-dot" data-dot="4"
+            style="background: rgb(71, 85, 105); transform: scale(1); opacity: 1; transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); box-shadow: rgba(71, 85, 105, 0.4) 0px 0px 20px;">
+          </div>
+          <div class="flex-1 w-full lg:pl-12">
+            <div
+              class="glass border rounded-3xl p-6 lg:p-8 hover-lift bg-white/80 border-slate-200/60 transform transition-all duration-500">
+              <div class="flex items-center gap-4 mb-4 lg:mb-6">
+                <span class="uppercase text-sm font-medium text-slate-600 tracking-wider">Step 04</span>
+              </div>
+              <h3 class="text-2xl lg:text-3xl font-light font-playfair mb-3 lg:mb-4 text-slate-800">We Launch</h3>
+              <p class="text-sm lg:text-base leading-relaxed text-slate-600">We go live together. We make sure everything works perfectly and hand it over to you fully ready to use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Enhanced timeline animation with smooth sequential reveal
+      function initSmoothTimeline() {
+        const progressLine = document.getElementById('progress-line');
+        const timelineSteps = document.querySelectorAll('.timeline-step');
+        const timelineDots = document.querySelectorAll('.timeline-dot');
+        const timelineContainer = document.getElementById('timeline-container');
+
+        if (!progressLine || !timelineSteps.length || !timelineDots.length) return;
+
+        let animationStarted = false;
+
+        // Reset all elements to initial state
+        function resetTimeline() {
+          progressLine.style.height = '0%';
+          timelineSteps.forEach(step => {
+            step.style.opacity = '0';
+            step.style.transform = 'translateY(50px)';
+          });
+          timelineDots.forEach(dot => {
+            dot.style.background = '#e2e8f0';
+            dot.style.transform = 'scale(0.8)';
+            dot.style.opacity = '0.5';
+            dot.style.boxShadow = 'none';
+          });
+        }
+
+        // Animate timeline sequentially
+        function animateTimeline() {
+          if (animationStarted) return;
+          animationStarted = true;
+
+          // Animate progress line first
+          setTimeout(() => {
+            progressLine.style.height = '100%';
+          }, 200);
+
+          // Animate each step with staggered timing
+          timelineSteps.forEach((step, index) => {
+            const dot = timelineDots[index];
+            const delay = 400 + (index * 600); // 600ms between each step
+
+            setTimeout(() => {
+              // Fade in step card
+              step.style.opacity = '1';
+              step.style.transform = 'translateY(0px)';
+
+              // Animate corresponding dot
+              if (dot) {
+                dot.style.background = '#475569';
+                dot.style.transform = 'scale(1)';
+                dot.style.opacity = '1';
+                dot.style.boxShadow = '0 0 20px rgba(71, 85, 105, 0.4)';
+              }
+            }, delay);
+          });
+        }
+
+        // Intersection Observer to trigger animation when section comes into view
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateTimeline();
+            } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+              // Reset when scrolling back up past the section
+              animationStarted = false;
+              resetTimeline();
+            }
+          });
+        }, {
+          threshold: 0.2,
+          rootMargin: '-100px 0px -50px 0px'
+        });
+
+        // Initialize
+        resetTimeline();
+        observer.observe(timelineContainer);
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSmoothTimeline);
+      } else {
+        initSmoothTimeline();
+      }
+    </script>
+  </section>
+
+  <section id="why-choose-us" class="relative z-10 max-w-7xl mr-auto ml-auto pt-20 pr-4 pb-20 pl-4 sm:px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-7xl sm:text-9xl font-extrabold text-white leading-none tracking-tight mb-4">
+        WHY CHOOSE US
+      </h2>
+      <p class="text-white/70 text-lg font-light max-w-2xl mx-auto">
+        We make the process easy, fast, and worth every naira.
+      </p>
+      <div class="inline-flex items-center gap-2 rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-3 py-2 mt-4">
+        <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span class="text-cyan-300 text-sm font-medium">Avg delivery: 12 days</span>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-8">
+        <div class="bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-400/20 rounded-2xl p-8 hover:border-blue-400/40 transition-all duration-300 backdrop-blur-xl">
+          <div class="h-12 w-12 rounded-xl bg-blue-500/15 flex items-center justify-center mb-6">
+            <span class="text-xl font-semibold text-blue-200">1</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">We Listen First</h3>
+          <p class="text-gray-300 font-light mb-4">We take time to understand your business before we touch any design. Your goals come first, always.</p>
+          <div class="flex flex-wrap gap-2 text-xs text-gray-400">
+            <span class="inline-flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md text-cyan-300">No rush</span>
+            <span class="inline-flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md text-cyan-300">Your vision</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-400/20 rounded-2xl p-8 hover:border-purple-400/40 transition-all duration-300 backdrop-blur-xl">
+          <div class="flex flex-col md:flex-row md:items-center">
+            <div class="md:w-1/2 mb-6 md:mb-0">
+              <div class="h-12 w-12 rounded-xl bg-purple-500/15 flex items-center justify-center mb-6">
+                <span class="text-xl font-semibold text-purple-200">2</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Clean, Simple Design</h3>
+              <p class="text-gray-300 font-light">We build sites that are easy to use and easy on the eyes. No clutter, no confusion — just clear and beautiful.</p>
+              <div class="flex flex-wrap gap-2 mt-4 text-xs text-gray-400">
+                <span class="inline-flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md text-cyan-300">Easy to use</span>
+                <span class="inline-flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md text-cyan-300">Looks great</span>
+              </div>
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs text-gray-300">Focus</span>
+                    <span class="text-xs text-emerald-300">Minimal</span>
+                  </div>
+                  <p class="text-sm text-white">No clutter</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-lg p-3">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs text-gray-300">Aesthetic</span>
+                    <span class="text-xs text-blue-300">Clean</span>
+                  </div>
+                  <p class="text-sm text-white">Easy on eyes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-8">
+        <div class="lg:col-span-2 bg-gradient-to-br from-amber-900/20 to-orange-900/20 border border-amber-400/20 rounded-2xl p-8 hover:border-amber-400/40 transition-all duration-300 backdrop-blur-xl">
+          <div class="flex flex-col md:flex-row md:items-center">
+            <div class="md:w-1/2 mb-6 md:mb-0">
+              <div class="h-12 w-12 rounded-xl bg-amber-500/15 flex items-center justify-center mb-6">
+                <span class="text-xl font-semibold text-amber-200">3</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Built to Work on Any Device</h3>
+              <p class="text-gray-300 font-light">Your website will look perfect on phones, tablets, and computers. Every time, for every visitor.</p>
+              <div class="flex flex-wrap gap-2 mt-4 text-xs text-gray-400">
+                <span class="inline-flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md text-cyan-300">Mobile-ready</span>
+                <span class="inline-flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md text-cyan-300">Fast loading</span>
+              </div>
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+              <div class="space-y-3">
+                <div class="bg-gradient-to-r from-amber-900/30 to-black/50 p-3 rounded-lg border border-amber-400/30">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-300">Responsive</span>
+                    <span class="text-amber-300 font-semibold">100%</span>
+                  </div>
+                </div>
+                <div class="bg-gradient-to-r from-amber-900/30 to-black/50 p-3 rounded-lg border border-amber-400/30">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-300">Speed</span>
+                    <span class="text-amber-300 font-semibold">Optimized</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-emerald-900/20 to-green-900/20 border border-emerald-400/20 rounded-2xl p-8 hover:border-emerald-400/40 transition-all duration-300 backdrop-blur-xl">
+          <div class="h-12 w-12 rounded-xl bg-emerald-500/15 flex items-center justify-center mb-6">
+            <span class="text-xl font-semibold text-emerald-200">4</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">We Don't Disappear After Launch</h3>
+          <p class="text-gray-300 font-light mb-4">We stay around. Need an update? Got a question? We're here to help even after your site goes live.</p>
+          <div class="flex flex-wrap gap-2 text-xs text-gray-400">
+            <span class="inline-flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md text-cyan-300">Always available</span>
+            <span class="inline-flex items-center gap-1 bg-white/5 border border-white/10 px-2 py-1 rounded-md text-cyan-300">24/7 support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sm:px-6 lg:px-8 lg:pt-12 lg:pb-12 z-10 max-w-7xl mr-auto ml-auto pt-32 pr-4 pb-20 pl-4 relative"
+    id="features">
+    <div
+      class="overflow-hidden sm:p-8 bg-gradient-to-br from-white/5 to-white/0 rounded-3xl ring-white/10 ring-1 pt-6 pr-6 pb-6 pl-6 relative backdrop-blur">
+      <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
+
+      <div class="[animation:fadeSlideIn_0.8s_ease-out_0.1s_both] animate-on-scroll text-center mb-12 animate">
+        <div class="mb-6">
+          <div
+            class="flex items-center justify-between text-[13px] sm:text-sm font-medium uppercase tracking-tight text-blue-400">
+            <span class="font-geist">TESTIMONIALS</span>
+            <span class="font-geist">(02)</span>
+          </div>
+          <div class="mt-2 h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        </div>
+
+        <div
+          class="flex flex-col [animation:fadeSlideIn_0.8s_ease-out_0.1s_both] animate-on-scroll sm:flex-row sm:items-end sm:justify-between mb-0 gap-x-0 gap-y-0 animate">
+          <div class="">
+            <h2
+              class="sm:text-4xl md:text-5xl text-3xl text-white text-left mt-0 font-geist font-light tracking-tighter">
+              What our customers say</h2>
+          </div>
+          <p class="sm:text-base text-sm text-slate-300 text-left max-w-[42ch] font-geist">Real feedback from teams
+            using
+            Nura to plan better, focus deeper, and ship faster.</p>
+        </div>
+      </div>
+
+      <section class="sm:px-6 lg:pl-0 lg:pr-0 lg:pt-0 lg:pb-0 z-10 max-w-7xl mr-auto ml-auto relative gap-x-0 gap-y-0"
+        id="testimonial">
+        <div
+          class="overflow-hidden sm:p-10 [animation:fadeSlideIn_0.8s_ease-out_0.2s_both] animate-on-scroll ring-white/10 ring-1 rounded-3xl pt-6 pr-6 pb-6 pl-6 relative backdrop-blur"
+          style="min-height: 540px">
+          <div
+            class="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:64px_64px]">
+          </div>
+          <div class="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl">
+          </div>
+          <div class="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-blue-400/10 blur-3xl">
+          </div>
+
+          <div class="absolute top-6 left-6 opacity-10 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.3">
+              <path d="M7 7h3v10H5V9a2 2 0 0 1 2-2Zm9 0h3v10h-5V9a2 2 0 0 1 2-2Z"></path>
+            </svg>
+          </div>
+
+          <div class="flex flex-col justify-between" style="min-height: 420px;">
+            <blockquote
+              class="relative text-center max-w-5xl mx-auto transition-opacity duration-300 flex-1 flex items-center justify-center"
+              id="testimonial-quote">
+              <p
+                class="sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-2xl font-light text-white tracking-tighter font-geist">
+                Cubrix completely
+                <span class="text-blue-400 font-geist font-light tracking-tighter">symbolizes architecture</span>
+                and web design.
+                <span class="text-blue-400 font-geist font-light tracking-tighter">without wasting time, we're
+                  dynamic</span>
+                and
+                flexible.
+              </p>
+            </blockquote>
+
+            <div class="mt-8 text-center transition-opacity duration-300" id="testimonial-author">
+              <p class="text-sm sm:text-base text-slate-200 font-medium font-geist">
+                Tunde .O. Victor <span class="text-slate-400 font-normal font-geist">Project Manager, Cubrix </span>
+              </p>
+            </div>
+
+            <div class="mt-10 flex items-end justify-center gap-3 sm:gap-4">
+              <img
+                class="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover ring-1 ring-white/10 opacity-40 grayscale cursor-pointer transition-opacity duration-200 hover:opacity-60"
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=Michael&amp;backgroundColor=transparent"
+                alt="Avatar 1" data-testimonial-index="0" data-testimonial-name="Michael Chen"
+                data-testimonial-role="CEO, TechFlow"
+                data-testimonial-quote="The AI automation in Nura has &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;saved us countless hours&lt;/span&gt; every week. Our team is more productive than ever, and we can finally focus on what really matters — &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;building great products&lt;/span&gt;.">
+
+              <img
+                class="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover ring-1 ring-white/10 opacity-40 grayscale cursor-pointer transition-opacity duration-200 hover:opacity-60"
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=Emily&amp;backgroundColor=transparent"
+                alt="Avatar 2" data-testimonial-index="1" data-testimonial-name="Emily Rodriguez"
+                data-testimonial-role="Product Lead, Innovate Labs"
+                data-testimonial-quote="Switching to Nura was the &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;best decision&lt;/span&gt; we made this year. The integrations are seamless, the interface is intuitive, and our team collaboration has &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;never been stronger&lt;/span&gt;.">
+
+              <img
+                class="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover ring-1 ring-white/10 opacity-40 grayscale cursor-pointer transition-opacity duration-200 hover:opacity-60"
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=David&amp;backgroundColor=transparent"
+                alt="Avatar 3" data-testimonial-index="2" data-testimonial-name="David Kim"
+                data-testimonial-role="Engineering Manager, CloudBase"
+                data-testimonial-quote="Nura's intelligent task prioritization helps us &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;ship features faster&lt;/span&gt; and with more confidence. The real-time sync across our distributed team is a &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;game-changer and worthy&lt;/span&gt;.">
+
+              <img
+                class="h-14 w-14 sm:h-16 sm:w-16 rounded-xl object-cover ring-2 ring-white/20 shadow-lg cursor-pointer"
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=Sarah&amp;backgroundColor=transparent"
+                alt="Avatar highlighted" data-testimonial-index="3" data-testimonial-name="Sarah Nguyen"
+                data-testimonial-role="Project Manager, Nova Studio"
+                data-testimonial-quote="Nura completely &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;transformed the way&lt;/span&gt; our team manages schedules. It keeps us organized, synced, and focused — &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;without wasting time planning&lt;/span&gt; or switching tools."
+                data-active="true">
+
+              <img
+                class="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover ring-1 ring-white/10 opacity-40 grayscale cursor-pointer transition-opacity duration-200 hover:opacity-60"
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=Jessica&amp;backgroundColor=transparent"
+                alt="Avatar 5" data-testimonial-index="4" data-testimonial-name="Jessica Park"
+                data-testimonial-role="Operations Director, Nexus Group"
+                data-testimonial-quote="From onboarding to daily workflows, Nura makes everything &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;effortless and efficient&lt;/span&gt;. We've reduced meeting time by 40% and our team satisfaction scores have &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;skyrocketed&lt;/span&gt;.">
+
+              <img
+                class="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover ring-1 ring-white/10 opacity-40 grayscale cursor-pointer transition-opacity duration-200 hover:opacity-60"
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=Alex&amp;backgroundColor=transparent"
+                alt="Avatar 6" data-testimonial-index="5" data-testimonial-name="Alex Thompson"
+                data-testimonial-role="Design Lead, Studio Bright"
+                data-testimonial-quote="The visual clarity and smart notifications in Nura help us stay aligned without &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;constant check-ins&lt;/span&gt;. Our design process is smoother and we deliver &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;higher quality work&lt;/span&gt; on time.">
+
+              <img
+                class="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover ring-1 ring-white/10 opacity-40 grayscale cursor-pointer transition-opacity duration-200 hover:opacity-60"
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=Rachel&amp;backgroundColor=transparent"
+                alt="Avatar 7" data-testimonial-index="6" data-testimonial-name="Rachel Foster"
+                data-testimonial-role="Marketing VP, Growth Co"
+                data-testimonial-quote="Nura has become the &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;single source of truth&lt;/span&gt; for our entire marketing team. Campaign planning, execution, and reporting are all in one place, making us &lt;span class='text-blue-400 font-geist font-light tracking-tighter'&gt;incredibly agile&lt;/span&gt;.">
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              const testimonials = document.querySelectorAll('#testimonial [data-testimonial-index]');
+              const quoteEl = document.getElementById('testimonial-quote');
+              const authorEl = document.getElementById('testimonial-author');
+
+              testimonials.forEach(function (thumbnail) {
+                thumbnail.addEventListener('click', function () {
+                  testimonials.forEach(function (t) {
+                    const isActive = t.getAttribute('data-active') === 'true';
+                    t.removeAttribute('data-active');
+                    if (isActive) {
+                      t.classList.remove('h-14', 'w-14', 'sm:h-16', 'sm:w-16', 'ring-2', 'ring-white/20', 'shadow-lg');
+                      t.classList.add('h-12', 'w-12', 'sm:h-14', 'sm:w-14', 'ring-1', 'ring-white/10', 'opacity-40', 'grayscale');
+                    }
+                  });
+                  thumbnail.setAttribute('data-active', 'true');
+                  thumbnail.classList.remove('h-12', 'w-12', 'sm:h-14', 'sm:w-14', 'ring-1', 'ring-white/10', 'opacity-40', 'grayscale');
+                  thumbnail.classList.add('h-14', 'w-14', 'sm:h-16', 'sm:w-16', 'ring-2', 'ring-white/20', 'shadow-lg');
+
+                  quoteEl.style.opacity = '0';
+                  authorEl.style.opacity = '0';
+
+                  setTimeout(function () {
+                    var quote = thumbnail.getAttribute('data-testimonial-quote');
+                    var name = thumbnail.getAttribute('data-testimonial-name');
+                    var role = thumbnail.getAttribute('data-testimonial-role');
+                    quoteEl.querySelector('p').innerHTML = quote;
+                    authorEl.querySelector('p').innerHTML = name + ' <span class="text-slate-400 font-normal font-geist">' + role + '</span>';
+                    quoteEl.style.opacity = '1';
+                    authorEl.style.opacity = '1';
+                  }, 250);
+                });
+              });
+            })();
+          </script>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    })();
+  </script>
+
+  <footer class="w-full sm:px-6 md:px-10 max-w-7xl mr-auto ml-auto pt-12 pr-4 pb-10 pl-4">
+    <div class="relative overflow-hidden bg-neutral-900 rounded-3xl">
+      <div class="relative z-10 sm:p-12 md:p-16 pt-12 pr-8 pb-8 pl-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 border-white/10 border-b pb-12">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-2 mb-4">
+              <h3 class="text-2xl font-semibold text-white tracking-tight font-playfair">Contact Cubrix</h3>
+            </div>
+            <p class="max-w-3xl text-white/70">We don’t just build websites, we architect digital identities from the
+              ground up, with precision on every face.</p>
+
+            <div id="contact" class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6 md:p-8">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="space-y-4">
+                  <div
+                    class="inline-flex items-center gap-2 ring-1 ring-neutral-200 text-xs text-slate-950 bg-neutral-200 rounded-full pt-1.5 pr-3 pb-1.5 pl-3">
+                    <span class="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                    Contact us today
+                  </div>
+                  <ul class="space-y-2 text-sm text-neutral-300">
+                    <li class="flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-check w-4 h-4 text-green-400 mt-0.5" style="stroke-width: 1.5">
+                        <path d="M20 6 9 17l-5-5"></path>
+                      </svg>
+                      <span> Available 24/7 </span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-check w-4 h-4 text-green-400 mt-0.5" style="stroke-width: 1.5">
+                        <path d="M20 6 9 17l-5-5"></path>
+                      </svg>
+                      <span> A master of structured digital experiences.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-check w-4 h-4 text-green-400 mt-0.5" style="stroke-width: 1.5">
+                        <path d="M20 6 9 17l-5-5"></path>
+                      </svg>
+                      <span>Implying dominance, expertise, and authority in the digital space.</span>
+                    </li>
+                  </ul>
+                  <div class="flex items-center gap-3 pt-2 text-sm"></div>
+                </div>
+
+                <form id="contactForm" class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4"
+                  action="https://formspree.io/f/mykqdveo" method="POST">
+                  <div class="sm:col-span-1">
+                    <label class="block text-xs font-medium text-white/80 mb-1">Name</label>
+                    <input type="text" name="name" required="" placeholder="Your name"
+                      class="w-full placeholder-white/40 outline-none focus:ring-2 focus:ring-red-400/60 focus:border-red-300 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3">
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-xs font-medium text-white/80 mb-1">Phone</label>
+                    <input type="tel" name="phone" required="" placeholder="+1 (234) 567-8900"
+                      class="w-full placeholder-white/40 outline-none focus:ring-2 focus:ring-red-400/60 focus:border-red-300 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3">
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label class="block text-xs font-medium text-white/80 mb-1">Extra notes</label>
+                    <textarea name="message" rows="3" placeholder="Tell us about your project..."
+                      class="w-full placeholder-white/40 outline-none focus:ring-2 focus:ring-red-400/60 focus:border-red-300 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3"></textarea>
+                  </div>
+                  <div id="formSuccess" class="sm:col-span-2 hidden text-sm text-green-400 text-center py-2">Thank you
+                    for submitting</div>
+                  <div class="sm:col-span-2 flex justify-end">
+                    <button type="submit"
+                      class="inline-flex gap-2 ring-1 ring-red-300 hover:bg-red-300 transition text-sm font-medium text-neutral-900 bg-red-400 rounded-xl pt-2.5 pr-4 pb-2.5 pl-4 shadow items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-calendar w-4 h-4" style="stroke-width: 1.5">
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
+                      </svg>
+                      Let's Build
+                    </button>
+                  </div>
+                </form>
+                <script>
+                  (function () {
+                    const form = document.getElementById('contactForm');
+                    const success = document.getElementById('formSuccess');
+                    if (form) {
+                      form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const data = new FormData(form);
+                        fetch(form.action, {
+                          method: 'POST',
+                          body: data,
+                          headers: { 'Accept': 'application/json' }
+                        }).then(function (res) {
+                          if (res.ok) {
+                            form.reset();
+                            success.classList.remove('hidden');
+                            setTimeout(function () { success.classList.add('hidden'); }, 4000);
+                          }
+                        }).catch(function () {
+                          success.textContent = 'Something went wrong. Please try again.';
+                          success.classList.remove('hidden');
+                        });
+                      });
+                    }
+                  })();
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row sm:items-center gap-3 border-white/10 border-t mt-10 pt-6 items-start justify-between">
+          <p class="text-white/60 text-sm">© 2026 Cubrix. All rights reserved.</p>
+          <div class="flex items-center gap-4 text-white/60 text-sm">
+            <span>Lagos,Nigeria</span>
+            <span class="hidden sm:block text-white/20">•</span>
+            <span>Open 24/7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
