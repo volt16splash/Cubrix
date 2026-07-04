@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cubrix</title>
   <link rel="icon" type="image/png" href="favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     * {
       margin: 0;
@@ -25,9 +26,48 @@
     Cal.ns["30min"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
   </script>
   <!-- Cal element-click embed code ends -->
+  <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js"></script>
 </head>
 
 <body class="bg-[#0a0a0a]">
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" style="position: fixed; inset: 0; z-index: 9999; overflow: hidden; background: #0a0a0a; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Inter', sans-serif;">
+    <div class="absolute inset-0">
+      <div data-us-project="yWZ2Tbe094Fsjgy9NRnD" class="absolute w-full h-full left-0 top-0"></div>
+    </div>
+    <div style="margin-bottom: 20px; position: relative; z-index: 1;">
+      <span style="font-size: 36px; font-weight: 600; color: #ffffff; letter-spacing: -0.02em;">Cubrix</span>
+    </div>
+    <p style="position: relative; z-index: 1; font-size: 16px; color: #a0a0a0; font-weight: 300; margin-bottom: 36px;">Where structure meets creativity</p>
+    <div style="position: relative; z-index: 1; display: flex; gap: 8px;">
+      <span class="load-dot" style="width: 10px; height: 10px; border-radius: 50%; background: #555; animation: dotPulse 1.4s ease-in-out infinite both; animation-delay: 0s;"></span>
+      <span class="load-dot" style="width: 10px; height: 10px; border-radius: 50%; background: #555; animation: dotPulse 1.4s ease-in-out infinite both; animation-delay: 0.16s;"></span>
+      <span class="load-dot" style="width: 10px; height: 10px; border-radius: 50%; background: #555; animation: dotPulse 1.4s ease-in-out infinite both; animation-delay: 0.32s;"></span>
+      <span class="load-dot" style="width: 10px; height: 10px; border-radius: 50%; background: #555; animation: dotPulse 1.4s ease-in-out infinite both; animation-delay: 0.48s;"></span>
+      <span class="load-dot" style="width: 10px; height: 10px; border-radius: 50%; background: #555; animation: dotPulse 1.4s ease-in-out infinite both; animation-delay: 0.64s;"></span>
+    </div>
+  </div>
+
+  <style>
+    @keyframes dotPulse {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+
+  <script>
+    (function() {
+      setTimeout(function() {
+        var loader = document.getElementById('loading-screen');
+        if (loader) {
+          loader.style.transition = 'opacity 0.6s ease';
+          loader.style.opacity = '0';
+          setTimeout(function() { loader.style.display = 'none'; }, 600);
+        }
+      }, 5000);
+    })();
+  </script>
 
   <header class="relative z-50 max-w-5xl w-full mr-auto ml-auto">
     <nav class="flex max-w-7xl md:px-6 mr-auto ml-auto pt-4 pr-4 pb-4 pl-4 items-center justify-between">
@@ -133,13 +173,13 @@
 
     </div>
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
 
         // Hero Entrance
+        // Hero Entrance — delayed until loading screen fully fades
         setTimeout(() => {
           document.getElementById('hero-badge').style.opacity = '1';
           document.getElementById('hero-badge').style.transform = 'translateY(0)';
@@ -152,7 +192,7 @@
 
           document.getElementById('hero-actions').style.opacity = '1';
           document.getElementById('hero-actions').style.transform = 'translateY(0)';
-        }, 100);
+        }, 5600);
       });
 
       // --- WebGL Dithered Atmosphere Shader ---
@@ -359,7 +399,6 @@
       </article>
     </main>
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const items = document.querySelectorAll('.reveal-text');
